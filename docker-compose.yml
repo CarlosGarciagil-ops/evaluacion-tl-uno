@@ -1,0 +1,22 @@
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: infra/nginx/Dockerfile
+    ports:
+      - "8088:80"
+    depends_on:
+      - bff
+
+  bff:
+    build: ./apps/bff
+    environment:
+      DOCUMENT_SERVICE_URL: http://document-service:8080
+      PORT: 3000
+    depends_on:
+      - document-service
+
+  document-service:
+    build: ./services/document-service
+    environment:
+      SERVER_PORT: 8080
