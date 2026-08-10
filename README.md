@@ -45,7 +45,7 @@ Además, el equipo presenta los siguientes indicadores:
 
 ## Tiempo disponible
 
-Máximo recomendado: **4 horas**.
+Máximo recomendado: **1 día**.
 
 No es obligatorio resolver todo. Se espera que el candidato priorice, implemente lo más crítico y documente claramente lo pendiente.
 
